@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="/node_modules/lodash/lodash.js"></script>
+        <script>
+            // works as expected
+            //console.log(Object.keys(_))
+            _.merge(1, 2);
+            _Orig = _;
+        </script>
+        <script src="/node_modules/optimizely-client-sdk/dist/optimizely.min.js"></script>
+        <script>
+            // TypeError: _.merge is not a function
+            
+            console.log(Object.keys(_Orig))
+            console.log(Object.keys(_))
+            _.merge(1, 2);
+        </script>
+    </head>
+</html>
